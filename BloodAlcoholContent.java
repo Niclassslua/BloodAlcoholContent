@@ -6,7 +6,7 @@ public class BloodAlcoholContent {
 		int a = Integer.parseInt(System.console().readLine()); // Input is set equal to "a" (where "a" is integer).
 
 		System.out.println("Specify mass of the person in kilograms (kg, integer): ");
-		int m = ScannerObject.nextInt(); // Input is set equal to "m" (where "m" is integer).
+		int m = Integer.parseInt(System.console().readLine()); // Input is set equal to "m" (where "m" is integer).
 
 		System.out.println("Specify gender of the person (0 -> woman, 1 -> man): ");
 		int gender = Integer.parseInt(System.console().readLine()); // Input is set equal to "gender" (where "gender" is integer).
