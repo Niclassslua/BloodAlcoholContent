@@ -1,41 +1,34 @@
-package uebung01;
-
-import static pr.MakeItSimple.println;
-import static pr.MakeItSimple.readInt;
+package BloodAlcoholContent;
 
 public class BloodAlcoholContent {
 	public static void main(String[] args) {
-		println("Gebe Masse des aufgenommen Alkohols in Gramm (g, ganzzahlig) an: ");
-		int a = readInt(); // Eingabe wird gleich "a" gesetzt (wobei "a" ganzahlig ist).
+		System.out.println("Specify mass of alcohol absorbed in grams (g, integer): ");
+		int a = ScannerObject.nextInt(); // Input is set equal to "a" (where "a" is integer).
 
-		println("Gebe Masse der Person in Kilogram (kg, ganzzahlig) an: ");
-		int m = readInt(); // Eingabe wird gleich "m" gesetzt (wobei "m" ganzahlig ist).
+		System.out.println("Specify mass of the person in kilograms (kg, integer): ");
+		int m = ScannerObject.nextInt(); // Input is set equal to "m" (where "m" is integer).
 
-		println("Gebe Geschlecht der Person (0 -> Frau, 1 -> Mann) an: ");
-		int gender = readInt(); // Eingabe wird gleich "gender" gesetzt (wobei "gender" ganzahlig ist).
+		System.out.println("Specify gender of the person (0 -> woman, 1 -> man): ");
+		int gender = ScannerObject.nextInt(); // Input is set equal to "gender" (where "gender" is integer).
 
-		double r = 0; // "r" wird initalisiert als double um sog. "fractional numbers" als Wert
-						// annehmen zu können.
+		double r = 0; // r" is initialized as a double to accept fractional numbers as value.
 
-		if (gender == 0) { // Wenn das Geschlecht "0" -> Frau ist.
+		if (gender == 0) { // If the gender is "0" -> woman.
 			r = 0.6;
 
-			double w = a / (m * r); // Formel wird mit allen vorher eingelesenen Variablen angewendet.
+			double w = a / (m * r); // Formula is applied with all previously read variables.
 
-			println("Die Blutalkoholkonzentration beträgt: " + w + " Promille, Widmark-Formel.");
-		} else if (gender == 1) { // Wenn das Geschlecht "1" -> Mann ist.
+			System.out.println("The blood alcohol concentration is: " + w + " per mille, Widmark formula.");
+		} else if (gender == 1) { // If the gender is "1" -> man.
 			r = 0.7;
 
-			double w = a / (m * r); // Formel wird mit allen vorher eingelesenen Variablen angewendet.
+			double w = a / (m * r); // Formula is applied with all previously read variables.
 
-			println("Die Blutalkoholkonzentration beträgt: " + w + " Promille, Widmark-Formel.");
-		} else { // Wenn das Geschlecht alles andere als "0" oder "1" -> nicht Frau oder Mann
-			// ist.
-			println("Geschlecht ungültig!");
+			System.out.println("The blood alcohol concentration is: " + w + " per mille, Widmark formula.");
+		} else { // If the gender is anything other than "0" or "1" -> not woman or man.
+			System.out.println("Gender invalid!");
 		}
 
-		// Nutzung von "return;" wird durch die Berechnung nach den "gender == 0/1"
-		// Abfragen umgangen.
-
+		// Use of "return;" is bypassed by the calculation after the "gender == 0/1" queries.
 	}
 }
