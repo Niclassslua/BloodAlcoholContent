@@ -3,13 +3,13 @@ package BloodAlcoholContent;
 public class BloodAlcoholContent {
 	public static void main(String[] args) {
 		System.out.println("Specify mass of alcohol absorbed in grams (g, integer): ");
-		int a = ScannerObject.nextInt(); // Input is set equal to "a" (where "a" is integer).
+		int a = Integer.parseInt(System.console().readLine()); // Input is set equal to "a" (where "a" is integer).
 
 		System.out.println("Specify mass of the person in kilograms (kg, integer): ");
 		int m = ScannerObject.nextInt(); // Input is set equal to "m" (where "m" is integer).
 
 		System.out.println("Specify gender of the person (0 -> woman, 1 -> man): ");
-		int gender = ScannerObject.nextInt(); // Input is set equal to "gender" (where "gender" is integer).
+		int gender = Integer.parseInt(System.console().readLine()); // Input is set equal to "gender" (where "gender" is integer).
 
 		double r = 0; // r" is initialized as a double to accept fractional numbers as value.
 
